@@ -29,7 +29,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-
 - **made with use of github workflow**
 - **made with use of linter checkers**
 
