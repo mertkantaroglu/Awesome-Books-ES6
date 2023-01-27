@@ -1,8 +1,31 @@
-// Book Class to add-remove books
-export const listBooks = document.querySelector('.bookList');
-export let books = new Array();
+const listBooks = document.querySelector('.bookList');
+const form = document.querySelector('.formInput');
+const [title, author] = form.elements;
 
-export const Book = class {
+const inputBook = {};
+let books = new Array(0);
+
+// Storage
+if (localStorage.savedBooks) {
+  books = JSON.parse(localStorage.getItem('savedBooks'));
+}
+
+title.addEventListener('change', () => {
+  inputBook.title = title.value;
+});
+
+author.addEventListener('change', () => {
+  inputBook.author = author.value;
+});
+
+const populateFields = () => {
+  localStorage.setItem('savedBooks', JSON.stringify(books));
+  document.querySelector('.book-title').value = '';
+  document.querySelector('.book-author').value = '';
+};
+
+// Book Class to add-remove books
+const Book = class {
   constructor(title, author) {
     this.title = title;
     this.author = author;
@@ -27,11 +50,11 @@ export const Book = class {
     listBooks.innerHTML = '';
     books.map((book) => {
       const bookDiv = document.createElement('tr');
-      bookDiv.classList.add("bookDiv");
+      bookDiv.classList.add('bookDiv');
       const elementBook = document.createElement('td');
-      elementBook.classList.add("elementBook");
+      elementBook.classList.add('elementBook');
       const deleteBtn = document.createElement('button');
-      deleteBtn.classList.add("deleteBtn");
+      deleteBtn.classList.add('deleteBtn');
       deleteBtn.textContent = 'Remove';
 
       elementBook.textContent = `"${book.title}" by ${book.author}`;
@@ -51,11 +74,12 @@ export const Book = class {
   }
 };
 
-export const populateFields = () => {
-  localStorage.setItem('savedBooks', JSON.stringify(books));
-  document.querySelector('.book-title').value = '';
-  document.querySelector('.book-author').value = '';
-};
+// Form Submit
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  Book.addBook(new Book(inputBook.title, inputBook.author));
+});
 
 Book.displayBooks();
 populateFields();
