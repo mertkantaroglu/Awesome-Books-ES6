@@ -1,0 +1,287 @@
+body {
+  font-family: sans-serif;
+  background: rgb(237, 237, 237);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.navItems {
+  gap: 1rem;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 28px;
+}
+
+form li {
+  list-style: none;
+  align-items: center;
+  padding: 10px;
+  display: flex;
+}
+
+form input {
+  padding: 15px 125px 15px 10px;
+  font-size: 20px;
+  box-shadow: 6px 6px;
+}
+
+.add-btn {
+  justify-content: center;
+  margin-left: auto;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 3px;
+  border: 3px solid #000;
+  box-shadow: 3px 3px;
+}
+
+.bookList {
+  border: solid black;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 12px;
+}
+
+.bookDiv {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bookDiv:nth-child(odd) {
+  background-color: rgb(202, 202, 202);
+}
+
+td {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.deleteBtn {
+  margin: 6px;
+  border: solid black;
+  padding: 6px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.name {
+  margin-right: 60%;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+footer a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.navbar a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.navbar a:hover {
+  color: blue;
+}
+
+.info-page {
+  width: 65%;
+  text-align: center;
+  margin: 10rem;
+}
+
+.add-book-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10rem;
+}
+
+#form {
+  padding-right: 40px;
+}
+
+.contact {
+  margin: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+}
+
+.contact h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.close {
+  display: none;
+}
+
+.navAwesome {
+  font-size: 30px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+hr {
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  position: fixed;
+  bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .navItems {
+    flex-direction: row;
+    gap: 1rem;
+    width: 80%;
+  }
+
+  .bookList {
+    border: solid black;
+    width: 80%;
+  }
+
+  .bookDiv {
+    background-color: white;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bookDiv:nth-child(odd) {
+    background-color: rgb(202, 202, 202);
+  }
+
+  td {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+  }
+
+  .deleteBtn {
+    margin: 6px;
+    border: solid black;
+    padding: 6px;
+    font-size: 18px;
+    border-radius: 8px;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+  }
+
+  .name {
+    margin-right: 60%;
+    font-size: 24px;
+  }
+
+  footer a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+
+  .navbar a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
+
+  .navbar a:hover {
+    color: blue;
+  }
+
+  .info-page {
+    width: 65%;
+    text-align: center;
+    margin: 10rem;
+  }
+
+  .add-book-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10rem;
+  }
+
+  #form {
+    padding-right: 40px;
+  }
+
+  .contact {
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  .contact h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .navAwesome {
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 10px;
+    width: 80%;
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  footer {
+    width: 80%;
+    text-align: center;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+  }
+}
